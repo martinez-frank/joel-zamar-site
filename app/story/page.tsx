@@ -1,6 +1,14 @@
+import Link from "next/link";
+
 export default function StoryPage() {
   return (
-    <main className="min-h-screen bg-black px-6 py-24 text-white md:py-32">
+    <main className="relative min-h-screen bg-black px-6 py-24 text-white md:py-32">
+      <Link
+        href="/"
+        className="absolute top-8 left-8 border border-white px-4 py-2 text-sm tracking-widest hover:bg-white hover:text-black transition"
+      >
+        BACK TO HOME
+      </Link>
       <div className="mx-auto max-w-3xl">
         <div className="text-center">
           <h1 className="text-4xl font-light tracking-wide md:text-5xl">What&apos;s Your Story?</h1>
