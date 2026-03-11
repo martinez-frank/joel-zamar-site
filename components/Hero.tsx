@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <main className="min-h-screen bg-black text-white flex items-center justify-center">
@@ -12,12 +14,12 @@ export default function Hero() {
         </p>
 
         <div className="mt-10 flex justify-center gap-4">
-          <a
-            href="#story"
+          <Link
+            href="/story"
             className="border border-white px-6 py-3 tracking-widest hover:bg-white hover:text-black transition"
           >
             TELL YOUR STORY
-          </a>
+          </Link>
 
           <button className="border border-white px-6 py-3 tracking-widest hover:bg-white hover:text-black transition">
             VIEW WORK
