@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -16,6 +17,13 @@ export default function Home() {
         <h1 className="mt-10 text-balance text-lg font-light tracking-[0.28em] text-white sm:text-xl md:text-2xl">
           Music. Film. Visual Storytelling.
         </h1>
+
+        <Link
+          href="/links"
+          className="mt-9 border-b border-white/50 pb-1 text-xs font-light tracking-[0.3em] text-white/85 transition hover:border-white hover:text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-black sm:text-sm"
+        >
+          EXPLORE
+        </Link>
 
         <a
           href="mailto:Mario@joelzamar.com"
