@@ -7,7 +7,8 @@ export const metadata: Metadata = {
   title: "Joel Zamar",
   description: siteDescription,
   icons: {
-    icon: "/jz-logo-white.png",
+    icon: [{ url: "/icon.svg?v=2", type: "image/svg+xml", sizes: "any" }],
+    shortcut: [{ url: "/icon.svg?v=2", type: "image/svg+xml" }],
   },
   openGraph: {
     title: "Joel Zamar",
