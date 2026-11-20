@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 
 export const metadata: Metadata = {
   title: "Videos | Joel Zamar",
-  description: "Watch Wave My Flag, a music video featured by Joel Zamar.",
+  description: "Watch films and music videos by Joel Zamar, including Cherokee Ranch & Castle and Wave My Flag.",
 };
+
+const cherokeeRanchVideo = "/videos/CR_Cherokee_Ranch_Web_Optimized.mp4";
+
+// The film appears automatically when its optimized MP4 is committed to public/videos.
+const hasCherokeeRanchVideo = existsSync(
+  join(process.cwd(), "public", "videos", "CR_Cherokee_Ranch_Web_Optimized.mp4"),
+);
 
 export default function VideosPage() {
   return (
@@ -23,7 +32,29 @@ export default function VideosPage() {
         <p className="text-xs font-light tracking-[0.3em] text-white/45">JOEL ZAMAR</p>
         <h1 className="mt-4 text-4xl font-light tracking-[0.13em] sm:text-5xl">Videos</h1>
 
-        <div className="mt-12 grid items-center gap-10 border-t border-white/20 pt-10 md:grid-cols-[minmax(0,340px)_minmax(0,1fr)] md:gap-16">
+        {hasCherokeeRanchVideo && (
+          <article className="mt-12 border-t border-white/20 pt-10">
+            <p className="text-xs font-light tracking-[0.25em] text-white/45">FEATURED FILM</p>
+            <h2 className="mt-4 text-2xl font-light tracking-[0.08em] sm:text-3xl">Cherokee Ranch &amp; Castle</h2>
+            <p className="mt-3 text-sm font-light tracking-[0.08em] text-white/55">
+              Visual storytelling
+            </p>
+            <div className="mt-8 overflow-hidden rounded-sm border border-white/10 bg-neutral-950">
+              <video
+                controls
+                playsInline
+                preload="metadata"
+                aria-label="Cherokee Ranch and Castle film"
+                className="aspect-video w-full bg-black object-contain"
+              >
+                <source src={cherokeeRanchVideo} type="video/mp4" />
+                Your browser does not support HTML video.
+              </video>
+            </div>
+          </article>
+        )}
+
+        <article className="mt-12 grid items-center gap-10 border-t border-white/20 pt-10 md:grid-cols-[minmax(0,340px)_minmax(0,1fr)] md:gap-16">
           <div className="mx-auto w-full max-w-[340px] overflow-hidden rounded-sm border border-white/10 bg-neutral-950">
             <video
               controls
@@ -38,7 +69,7 @@ export default function VideosPage() {
           </div>
 
           <div className="md:self-center">
-            <p className="text-xs font-light tracking-[0.25em] text-white/45">FEATURED VIDEO</p>
+            <p className="text-xs font-light tracking-[0.25em] text-white/45">MUSIC VIDEO</p>
             <h2 className="mt-4 text-2xl font-light tracking-[0.08em] sm:text-3xl">Wave My Flag</h2>
             <p className="mt-3 text-sm font-light tracking-[0.1em] text-white/60">Myron El</p>
             <p className="mt-7 max-w-sm text-sm font-light leading-7 text-white/55">
@@ -48,7 +79,7 @@ export default function VideosPage() {
               LISTEN TO THE SONG →
             </Link>
           </div>
-        </div>
+        </article>
       </section>
 
       <footer className="mx-auto mt-24 max-w-4xl text-center text-xs font-light tracking-[0.22em] text-white/35">
