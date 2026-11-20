@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import InstagramIcon from "@/components/InstagramIcon";
 
 export default function Home() {
   return (
@@ -30,6 +31,17 @@ export default function Home() {
           className="mt-7 text-sm font-light tracking-[0.18em] text-white/70 transition hover:text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-black sm:text-base"
         >
           Mario@joelzamar.com
+        </a>
+
+        <a
+          href="https://www.instagram.com/joelzamar_music/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Joel Zamar Music on Instagram"
+          className="mt-6 inline-flex items-center gap-2 rounded-sm text-xs font-light tracking-[0.18em] text-white/55 transition hover:text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-black"
+        >
+          <InstagramIcon className="h-[18px] w-[18px]" />
+          <span>INSTAGRAM</span>
         </a>
       </section>
 
