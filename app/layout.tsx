@@ -11,9 +11,6 @@ export const metadata: Metadata = {
   title: "Joel Zamar",
   description: siteDescription,
   applicationName: "Joel Zamar",
-  alternates: {
-    canonical: "/",
-  },
   icons: {
     icon: [{ url: "/icon.svg?v=2", type: "image/svg+xml", sizes: "any" }],
     shortcut: [{ url: "/icon.svg?v=2", type: "image/svg+xml" }],
