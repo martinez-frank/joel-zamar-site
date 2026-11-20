@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import InstagramIcon from "@/components/InstagramIcon";
 
 export const metadata: Metadata = {
   title: "Links | Joel Zamar",
@@ -11,6 +12,7 @@ const destinations = [
   { label: "MUSIC", detail: "Listen to Wave My Flag", href: "/music", external: false },
   { label: "VIDEOS", detail: "Visual storytelling", href: "/videos", external: false },
   { label: "SPOTIFY", detail: "Wave My Flag — Myron El", href: "https://open.spotify.com/track/5vqdpUCYe40FegZ8vuqRw9", external: true },
+  { label: "INSTAGRAM", detail: "@joelzamar_music", href: "https://www.instagram.com/joelzamar_music/", external: true },
   { label: "CONTACT", detail: "Mario@joelzamar.com", href: "mailto:Mario@joelzamar.com", external: false },
 ] as const;
 
@@ -34,7 +36,10 @@ export default function LinksPage() {
               className="group flex w-full items-center justify-between gap-4 border-b border-white/20 py-5 transition hover:border-white/45 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               <span>
-                <span className="block text-sm font-light tracking-[0.22em] text-white">{label}</span>
+                <span className="flex items-center gap-3 text-sm font-light tracking-[0.22em] text-white">
+                  {label === "INSTAGRAM" && <InstagramIcon className="h-[18px] w-[18px] shrink-0" />}
+                  {label}
+                </span>
                 <span className="mt-1.5 block text-xs font-light tracking-[0.05em] text-white/45">{detail}</span>
               </span>
               <span aria-hidden="true" className="text-xl font-light text-white/40 transition group-hover:translate-x-1 group-hover:text-white">
