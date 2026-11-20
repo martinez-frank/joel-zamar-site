@@ -4,10 +4,15 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Music | Joel Zamar",
-  description: "Listen to Wave My Flag by Myron El.",
+  description: "Listen to featured music from Joel Zamar, including Lights On and Wave My Flag.",
 };
 
-const spotifyTrack = "https://open.spotify.com/track/5vqdpUCYe40FegZ8vuqRw9";
+const lightsOnSpotify = "https://open.spotify.com/track/5DH302mxUJR8AbtTWIFN8Q";
+const lightsOnApple = "https://music.apple.com/us/album/lights-on/6773565470?i=6773565621";
+const waveMyFlagSpotify = "https://open.spotify.com/track/5vqdpUCYe40FegZ8vuqRw9";
+
+const externalLinkStyles =
+  "border-b border-white/55 pb-1 text-white transition hover:border-white hover:text-white/70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white";
 
 export default function MusicPage() {
   return (
@@ -24,7 +29,34 @@ export default function MusicPage() {
       <section className="mx-auto w-full max-w-2xl pt-16 sm:pt-24">
         <p className="text-xs font-light tracking-[0.3em] text-white/45">JOEL ZAMAR</p>
         <h1 className="mt-4 text-4xl font-light tracking-[0.13em] sm:text-5xl">Music</h1>
-        <div className="mt-12 border-t border-white/20 pt-9">
+
+        <article className="mt-12 border-t border-white/20 pt-9">
+          <p className="text-xs font-light tracking-[0.25em] text-white/45">NEWLY ADDED</p>
+          <h2 className="mt-4 text-2xl font-light tracking-[0.08em] sm:text-3xl">Lights On</h2>
+          <p className="mt-2 text-sm tracking-[0.12em] text-white/55">Listen on your favorite platform</p>
+
+          <div className="mt-8 overflow-hidden rounded-xl bg-neutral-900">
+            <iframe
+              title="Lights On on Spotify"
+              src="https://open.spotify.com/embed/track/5DH302mxUJR8AbtTWIFN8Q?theme=0"
+              width="100%"
+              height="152"
+              className="block border-0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            />
+          </div>
+          <div className="mt-7 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm font-light tracking-[0.12em]">
+            <a href={lightsOnSpotify} target="_blank" rel="noopener noreferrer" className={externalLinkStyles}>
+              SPOTIFY ↗
+            </a>
+            <a href={lightsOnApple} target="_blank" rel="noopener noreferrer" className={externalLinkStyles}>
+              APPLE MUSIC ↗
+            </a>
+          </div>
+        </article>
+
+        <article className="mt-16 border-t border-white/20 pt-9">
           <p className="text-xs font-light tracking-[0.25em] text-white/45">FEATURED RELEASE</p>
           <h2 className="mt-4 text-2xl font-light tracking-[0.08em] sm:text-3xl">Wave My Flag</h2>
           <p className="mt-2 text-sm tracking-[0.12em] text-white/55">Myron El</p>
@@ -40,16 +72,15 @@ export default function MusicPage() {
               loading="lazy"
             />
           </div>
-
           <div className="mt-7 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm font-light tracking-[0.12em]">
-            <a href={spotifyTrack} target="_blank" rel="noopener noreferrer" className="border-b border-white/60 pb-1 text-white transition hover:border-white hover:text-white/75 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
-              OPEN IN SPOTIFY ↗
+            <a href={waveMyFlagSpotify} target="_blank" rel="noopener noreferrer" className={externalLinkStyles}>
+              SPOTIFY ↗
             </a>
             <Link href="/videos" className="border-b border-white/30 pb-1 text-white/65 transition hover:border-white hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
-              WATCH THE VIDEO →
+              WATCH VIDEO →
             </Link>
           </div>
-        </div>
+        </article>
       </section>
 
       <footer className="mx-auto mt-24 max-w-4xl text-center text-xs font-light tracking-[0.22em] text-white/35">
