@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import InstagramIcon from "@/components/InstagramIcon";
+import MinimalArrow from "@/components/MinimalArrow";
 
 export const metadata: Metadata = {
   title: "Links | Joel Zamar",
@@ -43,8 +44,8 @@ export default function LinksPage() {
                 </span>
                 <span className="mt-1.5 block text-xs font-light tracking-[0.05em] text-white/45">{detail}</span>
               </span>
-              <span aria-hidden="true" className="text-xl font-light text-white/40 transition group-hover:translate-x-1 group-hover:text-white">
-                {external ? "↗" : "→"}
+              <span className="shrink-0 text-white/40 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-white">
+                <MinimalArrow className="h-6 w-6" />
               </span>
             </Link>
           ))}
