@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import MinimalArrow from "@/components/MinimalArrow";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 
@@ -75,8 +76,8 @@ export default function VideosPage() {
             <p className="mt-7 max-w-sm text-sm font-light leading-7 text-white/55">
               A visual story told through music.
             </p>
-            <Link href="/music" className="mt-9 inline-block border-b border-white/60 pb-1 text-sm font-light tracking-[0.15em] text-white transition hover:border-white hover:text-white/70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
-              LISTEN TO THE SONG →
+            <Link href="/music" className="mt-9 inline-flex items-center gap-2 border-b border-white/60 pb-1 text-sm font-light tracking-[0.15em] text-white transition hover:border-white hover:text-white/70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+              LISTEN TO THE SONG <MinimalArrow className="h-4 w-4" />
             </Link>
           </div>
         </article>
