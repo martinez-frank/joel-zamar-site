@@ -32,7 +32,7 @@ export default function LinksPage() {
         <nav aria-label="Explore Joel Zamar" className="mt-12 w-full border-t border-white/20 text-left">
           {destinations.map(({ label, detail, href, external }) => (
             <Link
-              key={label}
+              key={href}
               href={href}
               target={external ? "_blank" : undefined}
               rel={external ? "noopener noreferrer" : undefined}
