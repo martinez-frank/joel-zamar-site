@@ -10,10 +10,11 @@ export const metadata: Metadata = {
 };
 
 const destinations = [
-  { label: "MUSIC", detail: "Lights On · Wave My Flag", href: "/music", external: false },
+  { label: "MUSIC", detail: "I'll Praise You · Wave My Flag", href: "/music", external: false },
   { label: "VIDEOS", detail: "Films and music videos", href: "/videos", external: false },
-  { label: "SPOTIFY", detail: "Lights On", href: "https://open.spotify.com/track/5DH302mxUJR8AbtTWIFN8Q", external: true },
-  { label: "APPLE MUSIC", detail: "Lights On", href: "https://music.apple.com/us/album/lights-on/6773565470?i=6773565621", external: true },
+  { label: "SPOTIFY", detail: "I'll Praise You", href: "https://open.spotify.com/track/5DH302mxUJR8AbtTWIFN8Q", external: true },
+  { label: "SPOTIFY", detail: "Wave My Flag — Myron El", href: "https://open.spotify.com/track/5vqdpUCYe40FegZ8vuqRw9", external: true },
+  { label: "APPLE MUSIC", detail: "I'll Praise You", href: "https://music.apple.com/us/album/lights-on/6773565470?i=6773565621", external: true },
   { label: "INSTAGRAM", detail: "@joelzamar_music", href: "https://www.instagram.com/joelzamar_music/", external: true },
   { label: "CONTACT", detail: "Mario@joelzamar.com", href: "mailto:Mario@joelzamar.com", external: false },
 ] as const;
