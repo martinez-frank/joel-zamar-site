@@ -5,7 +5,7 @@ import MinimalArrow from "@/components/MinimalArrow";
 
 export const metadata: Metadata = {
   title: "Music | Joel Zamar",
-  description: "Listen to featured music from Joel Zamar, including I\u0027ll Praise You and Wave My Flag.",
+  description: "Listen to featured music from Joel Zamar, including I'll Praise You and Wave My Flag.",
 };
 
 const lightsOnSpotify = "https://open.spotify.com/track/5DH302mxUJR8AbtTWIFN8Q";
@@ -38,7 +38,7 @@ export default function MusicPage() {
 
           <div className="mt-8 overflow-hidden rounded-xl bg-neutral-900">
             <iframe
-              title="I\u0027ll Praise You on Spotify"
+              title="I'll Praise You on Spotify"
               src="https://open.spotify.com/embed/track/5DH302mxUJR8AbtTWIFN8Q?theme=0"
               width="100%"
               height="152"
