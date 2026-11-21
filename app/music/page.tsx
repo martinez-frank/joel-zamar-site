@@ -5,11 +5,11 @@ import MinimalArrow from "@/components/MinimalArrow";
 
 export const metadata: Metadata = {
   title: "Music | Joel Zamar",
-  description: "Listen to featured music from Joel Zamar, including I'll Praise You and Wave My Flag.",
+  description: "Listen to featured music from Joel Zamar, including I'll Praise You, Turn Your Lights On, and Wave My Flag.",
 };
 
-const lightsOnSpotify = "https://open.spotify.com/track/5DH302mxUJR8AbtTWIFN8Q";
-const lightsOnApple = "https://music.apple.com/us/album/lights-on/6773565470?i=6773565621";
+const praiseYouSpotify = "https://open.spotify.com/track/5DH302mxUJR8AbtTWIFN8Q";
+const turnYourLightsOnApple = "https://music.apple.com/us/album/lights-on/6773565470?i=6773565621";
 const waveMyFlagSpotify = "https://open.spotify.com/track/5vqdpUCYe40FegZ8vuqRw9";
 
 const externalLinkStyles =
@@ -34,7 +34,7 @@ export default function MusicPage() {
         <article className="mt-12 border-t border-white/20 pt-9">
           <p className="text-xs font-light tracking-[0.25em] text-white/45">NEWLY ADDED</p>
           <h2 className="mt-4 text-2xl font-light tracking-[0.08em] sm:text-3xl">I&apos;ll Praise You</h2>
-          <p className="mt-2 text-sm tracking-[0.12em] text-white/55">Listen on your favorite platform</p>
+          <p className="mt-2 text-sm tracking-[0.12em] text-white/55">Listen on Spotify</p>
 
           <div className="mt-8 overflow-hidden rounded-xl bg-neutral-900">
             <iframe
@@ -48,10 +48,18 @@ export default function MusicPage() {
             />
           </div>
           <div className="mt-7 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm font-light tracking-[0.12em]">
-            <a href={lightsOnSpotify} target="_blank" rel="noopener noreferrer" className={externalLinkStyles}>
+            <a href={praiseYouSpotify} target="_blank" rel="noopener noreferrer" className={externalLinkStyles}>
               SPOTIFY <MinimalArrow className="h-4 w-4" />
             </a>
-            <a href={lightsOnApple} target="_blank" rel="noopener noreferrer" className={externalLinkStyles}>
+          </div>
+        </article>
+
+        <article className="mt-16 border-t border-white/20 pt-9">
+          <p className="text-xs font-light tracking-[0.25em] text-white/45">APPLE MUSIC RELEASE</p>
+          <h2 className="mt-4 text-2xl font-light tracking-[0.08em] sm:text-3xl">Turn Your Lights On</h2>
+          <p className="mt-2 text-sm tracking-[0.12em] text-white/55">Listen on Apple Music</p>
+          <div className="mt-7 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm font-light tracking-[0.12em]">
+            <a href={turnYourLightsOnApple} target="_blank" rel="noopener noreferrer" className={externalLinkStyles}>
               APPLE MUSIC <MinimalArrow className="h-4 w-4" />
             </a>
           </div>
