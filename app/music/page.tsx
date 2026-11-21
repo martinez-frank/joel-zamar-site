@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import MinimalArrow from "@/components/MinimalArrow";
 
 export const metadata: Metadata = {
   title: "Music | Joel Zamar",
@@ -12,7 +13,7 @@ const lightsOnApple = "https://music.apple.com/us/album/lights-on/6773565470?i=6
 const waveMyFlagSpotify = "https://open.spotify.com/track/5vqdpUCYe40FegZ8vuqRw9";
 
 const externalLinkStyles =
-  "border-b border-white/55 pb-1 text-white transition hover:border-white hover:text-white/70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white";
+  "inline-flex items-center gap-2 border-b border-white/55 pb-1 text-white transition hover:border-white hover:text-white/70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white";
 
 export default function MusicPage() {
   return (
@@ -48,10 +49,10 @@ export default function MusicPage() {
           </div>
           <div className="mt-7 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm font-light tracking-[0.12em]">
             <a href={lightsOnSpotify} target="_blank" rel="noopener noreferrer" className={externalLinkStyles}>
-              SPOTIFY ↗
+              SPOTIFY <MinimalArrow className="h-4 w-4" />
             </a>
             <a href={lightsOnApple} target="_blank" rel="noopener noreferrer" className={externalLinkStyles}>
-              APPLE MUSIC ↗
+              APPLE MUSIC <MinimalArrow className="h-4 w-4" />
             </a>
           </div>
         </article>
@@ -74,10 +75,10 @@ export default function MusicPage() {
           </div>
           <div className="mt-7 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm font-light tracking-[0.12em]">
             <a href={waveMyFlagSpotify} target="_blank" rel="noopener noreferrer" className={externalLinkStyles}>
-              SPOTIFY ↗
+              SPOTIFY <MinimalArrow className="h-4 w-4" />
             </a>
-            <Link href="/videos" className="border-b border-white/30 pb-1 text-white/65 transition hover:border-white hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
-              WATCH VIDEO →
+            <Link href="/videos" className="inline-flex items-center gap-2 border-b border-white/30 pb-1 text-white/65 transition hover:border-white hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+              WATCH VIDEO <MinimalArrow className="h-4 w-4" />
             </Link>
           </div>
         </article>
