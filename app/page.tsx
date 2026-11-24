@@ -34,6 +34,13 @@ export default function Home() {
         </a>
 
         <a
+          href="mailto:tim@joelzamar.com"
+          className="mt-3 text-sm font-light tracking-[0.18em] text-white/70 transition hover:text-white focus:outline-none focus-visible:ring-1 focus-visible:ring-white/70 focus-visible:ring-offset-4 focus-visible:ring-offset-black sm:text-base"
+        >
+          tim@joelzamar.com
+        </a>
+
+        <a
           href="https://www.instagram.com/joelzamar_music/"
           target="_blank"
           rel="noopener noreferrer"
