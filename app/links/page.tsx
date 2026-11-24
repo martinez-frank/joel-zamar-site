@@ -17,7 +17,7 @@ const destinations = [
   { label: "SPOTIFY", detail: "Wave My Flag — Myron El", href: "https://open.spotify.com/track/5vqdpUCYe40FegZ8vuqRw9", external: true },
   { label: "INSTAGRAM", detail: "@joelzamar_music", href: "https://www.instagram.com/joelzamar_music/", external: true },
   { label: "CONTACT", detail: "Mario@joelzamar.com", href: "mailto:Mario@joelzamar.com", external: false },
-  { label: "CONTACT", detail: "tim@joelzamar.com", href: "mailto:tim@joelzamar.com", external: false },
+  { label: "CONTACT", detail: "Tim@joelzamar.com", href: "mailto:tim@joelzamar.com", external: false },
 ] as const;
 
 export default function LinksPage() {
